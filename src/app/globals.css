@@ -1,42 +1,116 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/*-------------------------- Global CSS Classes -----------------------*/
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* border : 1px solid black; */
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/*-------------------------- Advertise Banner Classes -----------------------*/
+
+.adBanner {
+  position: sticky;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  background: #000;
+  color: rgba(235, 76, 107, 1);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.adContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*-------------------------- Product Page Classes -----------------------*/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20;
+}
+
+li {
+  list-style: none;
+}
+
+.container .card {
+  height: 500px;
+  width: 300px;
+  padding: 20px;
+}
+
+.cardCover {
+  width: 100%;
+  height: 360px;
+  position: relative;
+}
+
+/*-------------------------- NavBar Classes -----------------------*/
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 160px;
+  top: 16px;
+  left: 0;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px;
+  width: 100%;
+  height: 50%;
+}
+
+.branding h1 {
+  font-size: x-large;
+  font-weight: 900;
+  letter-spacing: 3px;
+  position: absolute;
+  left: 50%;
+  top: 17%;
+  transform: translate(-50, -50);
+}
+
+.branding .features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: medium;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.tabs {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 30px;
+  border-bottom: 1px solid black;
+  padding-bottom: 16px;
+  text-transform: uppercase;
+  font-size: larger;
+  letter-spacing: -2px;
+  font-weight: 400;
+}
+
+.tabs span {
+  cursor: pointer;
 }
