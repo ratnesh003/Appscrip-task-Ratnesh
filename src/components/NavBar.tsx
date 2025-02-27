@@ -13,14 +13,14 @@ const NavBar = () => {
   return (
     <nav className='navContainer'>
       <div className='branding'>
-        <Image src={brandLogo} height={30} width={30} alt='Brand Logo'/>
+        <Image style={{cursor: 'pointer'}} src={brandLogo} height={30} width={30} alt='Brand Logo' onClick={() => router.push('/')}/>
         <h1>LOGO</h1>
         <div className='features'>
-          <span>&#x1F50D;</span>
-          <span>&#9825;</span>
-          <span>&#128717;</span>
-          <span>&#x1F464;</span>
-          <span> ENG &#x1F893;</span>
+          <span key={1}>&#x1F50D;</span>
+          <span key={2}>&#9825;</span>
+          <span key={3}>&#128717;</span>
+          <span key={4}>&#x1F464;</span>
+          <span key={5}> ENG &#x1F893;</span>
         </div>
       </div>
       <div className='tabs'>
